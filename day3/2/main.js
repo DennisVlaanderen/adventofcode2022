@@ -36,7 +36,7 @@ let result = temp.map((array) => {
 input = result.map((char) => char.charCodeAt(0))
 	.map((char) => {
 		let val = 0;
-		char > 96 ? val = char - 96 : val = char - 38;
+		val = char > 96 ? char - 96 : char - 38;
 		return val;
 	}).reduce((acc, val) => acc + val);
 
