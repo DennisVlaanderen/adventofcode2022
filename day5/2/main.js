@@ -35,8 +35,6 @@ input.forEach(([c, s, d]) => {
 	stacks[d-1].push(...elements);
 });
 
-const top = Object.values(stacks)
-	.map((crate) => crate[crate.length - 1])
-	.join('');
+const top = stacks.map((stack) => stack[stack.length-1]).join('');
 
 console.log(top);
